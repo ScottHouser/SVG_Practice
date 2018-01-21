@@ -1,0 +1,1202 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 4, 2017, 2:59:08 PM
+    Author     : apprentice
+*/
+
+.animatedElement{
+    animation: mymove .5s;
+}
+#p1{
+    animation: mymove2 4s infinite;
+}
+#circ10{
+    animation: mymove3 4s infinite;
+}
+#circ11{
+    animation: mymove4 4s infinite;
+}
+
+@keyframes mymove {              
+    0% {
+        transform: translateY(-150px);
+    }
+    34% {
+        transform: translateY(0px);
+    }
+    37% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes mymove2 {              
+    0% {
+        d:path('M165,100a40,40 0 1,0 80,0a40,40 0 1,0 -80,0');
+        fill:#aca9ad;
+    }
+
+    43% {
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        d:path('M165,100a40,40 0 1,0 80,0a40,40 0 1,0 -80,0');
+        fill:#aca9ad;
+
+    }
+
+    52% {
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        d:path('M125,97a80,30 0 1,0 160,0a80,30 0 1,0 -160,0');
+
+    }
+    55% {
+        d:path('M165,100a40,40 0 1,0 80,0a40,40 0 1,0 -80,0');
+
+    }
+    70% {
+        d:path('M175,97a30,80 0 1,0 60,0a30,80 0 1,0 -60,0');
+
+    }
+
+    75%{
+        transform-origin: 50% 50%;
+        transform: rotate(-15deg);
+        d:path('M165,100a40,40 0 1,0 80,0a40,40 0 1,0 -80,0');
+        fill:#8b28af;
+
+
+    }
+    100%{
+        d:path('M165,100a40,40 0 1,0 80,0a40,40 0 1,0 -80,0');
+        fill:#aca9ad;
+    }
+}
+@keyframes mymove3 {              
+    0% {
+
+        fill:#3b36d1;
+    }
+    63% {
+
+        fill:#3b36d1;
+    }
+    74% {
+
+        fill:#aca9ad;
+    }
+
+    100% {
+
+        fill:#3b36d1;
+    }
+}
+@keyframes mymove4 {              
+    0% {
+
+        fill:#db1e34;
+    }
+    63% {
+
+        fill:#db1e34;
+    }
+    64% {
+
+        fill:#aca9ad;
+    }
+    100% {
+
+        fill:#db1e34;
+    }
+}
+@keyframes mymove5 {              
+    0% {
+
+        #rect5279 transform: rotate(-15deg);
+    }
+    63% {
+
+        fill:#db1e34;
+    }
+    64% {
+
+        fill:#aca9ad;
+    }
+    100% {
+
+        fill:#db1e34;
+    }
+}
+
+#rect5257{
+    animation: mymove6 20s infinite;
+}
+#path5263{
+    animation: mymove7 20s infinite;
+}
+#path5267{
+    animation: mymove8 20s infinite;
+}
+#path5269{
+    animation: mymove9 20s infinite;
+}
+#path5271{
+    animation: mymove10 20s infinite;
+}
+#rect5273{
+    animation: mymove11 20s infinite;
+}
+#path5275{
+    animation: mymove12 20s infinite;
+}
+#path5277{
+    animation: mymove13 20s infinite;
+}
+#rect5279{
+    animation: mymove14 20s infinite;
+}
+#path5287{
+    animation: mymove15 20s infinite;
+}
+#path5289{
+    animation: mymove17 20s infinite;
+}
+#path5295{
+    animation: mymove18 20s infinite;
+}
+#path5297{
+    animation: mymove19 20s infinite;
+}
+#path5299{
+    animation: mymove20 20s infinite;
+}
+#path5301{
+    animation: mymove21 20s infinite;
+}
+#path5303{
+    animation: mymove22 20s infinite;
+}
+#path5335{
+    animation: mymove23 20s infinite;
+}
+#path5337{
+    animation: mymove24 20s infinite;
+}
+#path5341{
+    animation: mymove25 20s infinite;
+}
+#path5343{
+    animation: mymove26 20s infinite;
+}
+#path5345{
+    animation: mymove27 20s infinite;
+}
+#path5347{
+    animation: mymove28 20s infinite;
+}
+#path5349{
+    animation: mymove29 20s infinite;
+}
+#path5351{
+    animation: mymove30 20s infinite;
+}
+#path5353{
+    animation: mymove31 20s infinite;
+}
+#path5355{
+    animation: mymove32 20s infinite;
+}
+#path5357{
+    animation: mymove33 20s infinite;
+}
+#path5359{
+    animation: mymove34 20s infinite;
+}
+#path5361{
+    animation: mymove35 20s infinite;
+}
+#path5363{
+    animation: mymove36 20s infinite;
+}
+#path5365{
+    animation: mymove37 20s infinite;
+}
+#path5367{
+    animation: mymove38 20s infinite;
+}
+#path5369{
+    animation: mymove39 20s infinite;
+}
+#path5371{
+    animation: mymove40 20s infinite;
+}
+#path5373{
+    animation: mymove41 20s infinite;
+}
+#path5375{
+    animation: mymove42 20s infinite;
+}
+#path5377{
+    animation: mymove43 20s infinite;
+}
+#path5379{
+    animation: mymove44 20s infinite;
+}
+#path5381{
+    animation: mymove45 20s infinite;
+}
+#path5383{
+    animation: mymove46 20s infinite;
+}
+
+@keyframes mymove6 {              
+    0% {
+        fill:none;
+
+    }
+    2% {
+        fill:black;
+
+    }
+    83%{
+        fill:black;
+    }
+   
+
+    84% {
+        fill:none;
+
+    }
+    100%{
+        fill:none;
+    }
+
+}
+@keyframes mymove7 {              
+    0% {
+        fill:none;
+
+    }
+    2%{
+        fill:none;
+    }
+    3% {
+        fill:black;
+
+    }
+    84%{
+        fill:black;
+    }
+    
+    85% {
+        fill:none;
+
+    }
+    100%{
+        fill:none;
+    }
+
+}
+@keyframes mymove8 {              
+    0% {
+        fill:none;
+
+    }
+    3%{
+        fill:none;
+    }
+    4% {
+        fill:black;
+
+    }
+    
+    86% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove9 {              
+    0% {
+        fill:none;
+
+    }
+    6%{
+        fill:none;
+    }
+    7% {
+        fill:black;
+
+    }
+   
+    87% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove10 {              
+    0% {
+        fill:none;
+
+    }
+    8%{
+        fill:none;
+    }
+    9% {
+        fill:black;
+
+    }
+    
+    88% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+
+}
+@keyframes mymove11 {              
+    0% {
+        fill:none;
+
+    }
+    9%{
+        fill:none;
+    }
+    10% {
+        fill:black;
+
+    }
+    
+    89% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove12 {              
+    0% {
+        fill:none;
+
+    }
+    10% {
+        fill:none;
+
+    }
+    11%{
+        fill:black;
+    }
+    90% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+
+}
+@keyframes mymove13 {              
+    0% {
+        fill:none;
+
+    }
+    11% {
+        fill:none;
+
+    }
+    12%{
+        fill:black;
+    }
+    92% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+
+}
+@keyframes mymove14 {              
+    0% {
+        fill:none;
+
+    }
+    12% {
+        fill:none;
+
+    }
+    13%{
+        fill:black;
+    }
+    92% {
+        fill:black;
+
+    }
+    100%{
+        fill:none;
+    }
+
+}
+@keyframes mymove15 {              
+    0% {
+        fill:none;
+
+    }
+    19% {
+        fill:none;
+
+    }
+    20% {
+        fill:black;
+
+    }
+    21%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+
+}
+
+@keyframes mymove17 {              
+    0% {
+        fill:none;
+
+    }
+    23% {
+        fill:none;
+
+    }
+    24% {
+        fill:black;
+
+    }
+    25%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+    
+    
+}
+@keyframes mymove18 {              
+    0% {
+        fill:none;
+
+    }
+    25%{
+        fill:none;
+    }
+    26% {
+        fill:black;
+
+    }
+    27%{
+        fill:#e84b3a;
+    }
+    28%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    100% {
+        fill:none;
+
+    }
+}
+@keyframes mymove19 {              
+    0% {
+        fill:none;
+
+    }
+    27% {
+        fill:none;
+
+    }
+    28% {
+        fill:black;
+
+    }
+   29%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    100% {
+        fill:none;
+
+    }
+}
+@keyframes mymove20 {              
+    0% {
+        fill:none;
+
+    }
+    30% {
+        fill:none;
+
+    }
+    31% {
+        fill:black;
+
+    }
+    32%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    100% {
+        fill:none;
+
+    }
+}
+@keyframes mymove21 {              
+    0% {
+        fill:none;
+
+    }
+     31% {
+        fill:none;
+
+    }
+    32% {
+        fill:black;
+
+    }
+    33%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    100% {
+        fill:none;
+
+    }
+}
+@keyframes mymove22 {              
+    0% {
+        fill:none;
+
+    }
+     33% {
+        fill:none;
+
+    }
+    34% {
+        fill:black;
+
+    }
+    35%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    100% {
+        fill:none;
+
+    }
+}
+@keyframes mymove23 {              
+    0% {
+        fill:none;
+
+    }
+     35% {
+        fill:none;
+
+    }
+    36% {
+        fill:black;
+
+    }
+    37%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove24 {              
+    0% {
+        fill:none;
+
+    }
+     37% {
+        fill:none;
+
+    }
+    38% {
+        fill:black;
+
+    }
+    39%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove25 {              
+    0% {
+        fill:none;
+
+    }
+     39% {
+        fill:none;
+
+    }
+    40% {
+        fill:black;
+
+    }
+    41%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove26 {              
+    0% {
+        fill:none;
+
+    }
+     41% {
+        fill:none;
+
+    }
+    42% {
+        fill:black;
+
+    }
+    43%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove27 {              
+    0% {
+        fill:none;
+
+    }
+    43% {
+        fill:none;
+
+    }
+    44% {
+        fill:black;
+
+    }
+    46%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove28 {              
+    0% {
+        fill:none;
+
+    }
+     45% {
+        fill:none;
+
+    }
+    46% {
+        fill:black;
+
+    }
+    48%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove29 {              
+    0% {
+        fill:none;
+
+    } 
+    47% {
+        fill:none;
+
+    }
+    48% {
+        fill:black;
+
+    }
+    50%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove30 {              
+    0% {
+        fill:none;
+
+    }
+    49% {
+        fill:none;
+
+    }
+    50% {
+        fill:black;
+
+    }
+    52%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove31 {              
+    0% {
+        fill:none;
+
+    }
+    51% {
+        fill:none;
+
+    }
+    52% {
+        fill:black;
+
+    }
+    54%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove32 {              
+    0% {
+        fill:none;
+
+    }
+    53% {
+        fill:none;
+
+    }
+    54% {
+        fill:black;
+
+    }
+    56%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove33 {              
+    0% {
+        fill:none;
+
+    }
+    55% {
+        fill:none;
+
+    }
+    56% {
+        fill:black;
+
+    }
+    58%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove34 {              
+    0% {
+        fill:none;
+
+    }
+    57% {
+        fill:none;
+
+    }
+    58% {
+        fill:black;
+
+    }
+    60%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove35 {              
+    0% {
+        fill:none;
+
+    }
+    59% {
+        fill:none;
+
+    }
+    60% {
+        fill:black;
+
+    }
+    62%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove36 {              
+    0% {
+        fill:none;
+
+    }
+    61% {
+        fill:none;
+
+    }
+    62% {
+        fill:black;
+
+    }
+    64%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove37 {              
+    0% {
+        fill:none;
+
+    }
+    63% {
+        fill:none;
+
+    }
+    64% {
+        fill:black;
+
+    }
+    68%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove38 {              
+    0% {
+        fill:none;
+
+    }
+    65% {
+        fill:none;
+
+    }
+    66% {
+        fill:black;
+
+    }
+    68%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove39 {              
+    0% {
+        fill:none;
+
+    }
+    67% {
+        fill:none;
+
+    }
+    68% {
+        fill:black;
+
+    }
+    70%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove40 {              
+    0% {
+        fill:none;
+
+    }
+    69% {
+        fill:none;
+
+    }
+    70% {
+        fill:black;
+
+    }
+    72%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove41 {              
+    0% {
+        fill:none;
+
+    }
+    71% {
+        fill:none;
+
+    }
+    72% {
+        fill:black;
+
+    }
+    74%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove42 {              
+    0% {
+        fill:none;
+
+    }
+    73% {
+        fill:none;
+
+    }
+    74% {
+        fill:black;
+
+    }
+    76%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove43 {              
+    0% {
+        fill:none;
+
+    }
+    75% {
+        fill:none;
+
+    }
+    76% {
+        fill:black;
+
+    }
+    78%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove44 {              
+    0% {
+        fill:none;
+
+    }
+    77% {
+        fill:none;
+
+    }
+    78% {
+        fill:black;
+
+    }
+    80%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove45 {              
+    0% {
+        fill:none;
+
+    }
+    79% {
+        fill:none;
+
+    }
+    80% {
+        fill:black;
+
+    }
+    82%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}
+@keyframes mymove46 {              
+    0% {
+        fill:none;
+
+    }
+    81% {
+        fill:none;
+
+    }
+    82% {
+        fill:black;
+
+    }
+    84%{
+        fill:#e84b3a;
+    }
+    99%{
+        fill:#e84b3a;
+    }
+    
+    100%{
+        fill:none;
+    }
+}

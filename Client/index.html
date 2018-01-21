@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <link href="/Client/css/bootstrap.min.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <script src="/Client/js/jquery-2.2.4.min.js"></script>
+        <script src="/Client/js/bootstrap.min.js"></script>
+
+        <script src="/Client/js/angular.min.js"></script>
+        <script src="/Client/js/angularApp.js"></script>
+
+        <!-- Modules -->
+        <script src="/Client/js/controller.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Client/css/animations.css">
+        <!--        <script src="js/snap.svg.js"></script>
+                <script src="js/main.js"></script>-->
+
+        <style>
+
+
+
+            #background{
+                background-image: url("http://revolution-computing.typepad.com/.a/6a010534b1db25970b0120a6630f09970c-500wi");
+                background-repeat: no-repeat;
+                border-radius: 25px;
+                border: 2px solid #637593;
+                padding: 20px; 
+                background-color:white;
+                width:500px;
+                height:350px;
+                margin-top:20px;
+
+
+            }
+            #svg_div_2{
+                border-width:2px;
+                border-color:black;
+            }
+            #my_svg_2{
+
+                top:320px; 
+                left:0; 
+                height:300px; 
+                width:100%
+            }
+            #svg_div_2{
+
+                height:350px; 
+
+                padding:0px;
+
+            }
+            #header{
+                padding:0px;
+                margin-left:0px;
+                margin-right:0px;
+                background-color:white;
+
+
+            }
+            #info_div{
+
+            }
+            #svg_div_3{
+                border-radius: 25px;
+                border: 2px solid #637593;
+                padding: 20px; 
+                background-color:white; 
+                width:500px;
+                height:280px;
+                margin-bottom:20px;
+            }
+            #svg_div_4{
+                border-radius: 25px;
+                border: 2px solid #637593;
+                padding: 20px; 
+                background-color:white; 
+                width:500px;
+                height:280px;
+                margin-bottom:20px;
+            }
+            #svg_div_5{
+                border-radius: 25px;
+                border: 2px solid #637593;
+                padding: 20px; 
+                background-color:white; 
+                width:500px;
+                height:280px;
+                margin-bottom:20px;
+            }
+            #contain{
+                border-radius: 25px;
+                border: 1px solid #637593;
+                /*                background-color:#688ac1;*/
+                background-color:#989faa;
+                padding:0px;
+            }
+
+
+            @media screen and (max-width: 1180px) {
+                #contain {
+                    /*        display:none;*/
+                    border: 0px solid #637593;
+                    background-color:white;
+                }
+            }
+
+
+
+
+        </style>
+
+    </head>
+    <body ng-app="myApp">
+
+        <div id="header" class="container-fluid">
+            <div class="page-header">
+                <center><h1 id="title"> Practice with canvas and SVG</h1>  </center>  
+
+                <center><h2><a href="/Client/index2.html">Link to non interactive animations</a> </h2>  </center>  
+
+            </div>
+
+        </div>
+
+        <!--  should make div fixed width and div on bottom too  -->
+        <div class='col-sm-6 col-sm-offset-3' id='contain'>
+            <div class="col-sm-12">
+                <center>
+                    <div id="background" >
+                        <svg id="my_svg" width="480" height="260" style="margin-left:0px;">
+
+                        <defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="65%" y2="35%">
+                        <stop offset="0%" style="stop-color:rgb(244, 193, 197);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(237,11,30);stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="gradRect" x1="0%" y1="0%" x2="50%" y2="50%">
+                        <stop offset="0%" style="stop-color:rgb(200,200,200);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(100,100,100);stop-opacity:1" />
+                        </linearGradient>
+
+                        
+                        <filter id="f1" x="0" y="0" width="200%" height="200%">
+                            <feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                        </filter>
+
+                        </defs>
+
+
+                        
+                        <rect  width='4' height='13' x='218' y='121' fill='url(#gradRect)' rx='100%' ry='100%' />
+                        <circle onclick="displayCity()" id="circ" cx="220" cy="121" r="7" stroke="blue" stroke-width="0" fill="url(#grad2)" />
+                       
+                        </svg>
+                        <div>
+                            <h3 id="info_div">
+                                Click the map to place a pin
+                            </h3>
+                        </div>    
+                    </div>
+                </center>
+            </div>    
+            <!--    </center> -->
+            <div id="svg_div_2" class="col-sm-12">
+
+                <svg id="my_svg_2">
+                <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="65%" y2="35%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                </linearGradient>
+
+                <!--            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />-->
+                <filter id="f1" x="0" y="0" width="200%" height="200%">
+                    <feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                </filter>
+
+                </defs>
+
+                <circle filter="url(#f1)" id="circ0" cx="0" cy="30" r="30" stroke="#6c93d1" stroke-width="0" fill="url(#grad1)" />
+                <circle filter="url(#f1)" id="circ02" cx="0" cy="100" r="30" stroke="#6c93d1" stroke-width="0" fill="url(#grad1)" />
+                <circle filter="url(#f1)" id="circ03" cx="0" cy="170" r="30" stroke="#6c93d1" stroke-width="0" fill="url(#grad1)" />
+                <circle filter="url(#f1)" id="circ04" cx="100%" cy="30" r="30" stroke="#6c93d1" stroke-width="0" fill="url(#grad1)" />
+                <circle filter="url(#f1)" id="circ05" cx="100%" cy="100" r="30" stroke="#6c93d1" stroke-width="0" Fill="url(#grad1)" />
+                <circle filter="url(#f1)" id="circ06" cx="100%" cy="170" r="30" stroke="#6c93d1" stroke-width="0" fill="url(#grad1)" />
+
+
+
+                <animate 
+                    id="myAnimationElement"
+                    xlink:href="#circ0"
+                    attributeName="cx"
+                    from="0"
+                    to="40%" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement2"
+                    xlink:href="#circ0"
+                    attributeName="cy"
+                    from="30"
+                    to="240" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement3"
+                    xlink:href="#circ02"
+                    attributeName="cx"
+                    from="0"
+                    to="40%" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement4"
+                    xlink:href="#circ02"
+                    attributeName="cy"
+                    from="100"
+                    to="100" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement5"
+                    xlink:href="#circ03"
+                    attributeName="cx"
+                    from="0"
+                    to="40%" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement6"
+                    xlink:href="#circ03"
+                    attributeName="cy"
+                    from="170"
+                    to="170" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement7"
+                    xlink:href="#circ04"
+                    attributeName="cx"
+                    from="100%"
+                    to="60%" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement8"
+                    xlink:href="#circ04"
+                    attributeName="cy"
+                    from="30"
+                    to="240" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement9"
+                    xlink:href="#circ05"
+                    attributeName="cx"
+                    from="100%"
+                    to="60%" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement10"
+                    xlink:href="#circ05"
+                    attributeName="cy"
+                    from="100"
+                    to="100" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement11"
+                    xlink:href="#circ06"
+                    attributeName="cx"
+                    from="100%"
+                    to="60%" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+                <animate 
+                    id="myAnimationElement12"
+                    xlink:href="#circ06"
+                    attributeName="cy"
+                    from="170"
+                    to="170" 
+                    dur="1s"
+                    begin="indefinite"
+                    fill="freeze" 
+                    />
+
+                </svg>
+
+            </div>
+            <center>
+                <div class="col-sm-12">
+                    <div id="svg_div_3"   >
+                        <svg id="my_svg_3" width="460" height="180" style="margin-left:0px;background-color:#f4f6f9;border-width:2px;border-color:black;">
+                        <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="65%" y2="35%">
+                        <stop offset="0%" style="stop-color:rgb(211,221,237);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(30, 109, 237);stop-opacity:1" />
+                        </linearGradient>
+
+                        <!--            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />-->
+
+
+                        </defs>
+
+
+                        </svg>
+                        <h3>
+                            Click to create connected dots
+                        </h3>
+
+                    </div>
+                </div>    
+            </center>
+            <center>
+                <div class="col-sm-12">
+                    <div id="svg_div_4"   >
+                        <svg id="my_svg_4" width="460" height="180" style="margin-left:0px;background-color:#f4f6f9;border-width:2px;border-color:black;">
+                        <defs>
+                        <linearGradient id="grad4" x1="0%" y1="0%" x2="65%" y2="35%">
+                        <stop offset="0%" style="stop-color:rgb(211,221,237);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(30, 109, 237);stop-opacity:1" />
+                        </linearGradient>
+
+                        <!--            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />-->
+
+
+                        </defs>
+
+
+                        </svg>
+                        <h3>
+                            Click to create dot mesh
+                        </h3>
+                    </div>
+                </div>    
+            </center>
+            <center>
+
+            </center>
+            <center>
+                <div>
+
+                </div>
+            </center>
+        </div>
+
+
+
+
+
+
+        <script>
+            var str = "How are you doing today?";
+            var res = str.split("");
+            var rev = res.reverse();
+            var final = '';
+
+            for (var i = 0; i < rev.length; i++) {
+                final = final + rev[i];
+
+            }
+
+            console.log(final);
+
+
+            //dot grid
+            var svg3 = $('#my_svg_3');
+
+            document.getElementById("my_svg_3").addEventListener('click', function () {
+
+                var e = event.target;
+                var dim = e.getBoundingClientRect();
+                var x = event.clientX - dim.left;
+                var y = event.clientY - dim.top;
+                var display = $("<circle class='myCirc' cx='" + x + "' cy='" + y + "' r='5' stroke='black' stroke-width='0' fill='url(#grad3)'/>");
+
+                var svg = $('#my_svg_3');
+                svg.append(display);
+
+                var circlesArray = [];
+
+                var allTags = document.getElementById('my_svg_3').getElementsByTagName("circle");
+                for (var i = 0, len = allTags.length; i < len; i++) {
+                    var xCord = allTags[i].getAttribute("cx");
+                    var yCord = allTags[i].getAttribute("cy");
+                    circlesArray.push({'x': xCord, 'y': yCord});
+
+                }
+
+
+                for (var i = 0; i < circlesArray.length; i++) {
+
+                    try {
+                        if (i > circlesArray.length - 3) {
+
+                            var m = "M" + circlesArray[i].x + "," + circlesArray[i].y + " ";
+                            var l = "L" + circlesArray[i + 1].x + "," + circlesArray[i + 1].y;
+                            var newLine = $("<path fill='blue' stroke='blue' d='" + m + l + "' />");
+                            svg.append(newLine);
+                        }
+
+                    } catch (err) {
+
+                    }
+
+                }
+
+
+                $("body").html($("body").html());
+
+
+            }, false);
+
+
+            //dot grid 2
+            var svg3 = $('#my_svg_4');
+
+            document.getElementById("my_svg_4").addEventListener('click', function () {
+
+                var e = event.target;
+                var dim = e.getBoundingClientRect();
+                var x = event.clientX - dim.left;
+                var y = event.clientY - dim.top;
+                var display = $("<circle class='myCirc' cx='" + x + "' cy='" + y + "' r='5' stroke='black' stroke-width='0' fill='url(#grad4)'/>");
+
+                var svg = $('#my_svg_4');
+                svg.append(display);
+
+                var circlesArray = [];
+
+                var allTags = document.getElementById('my_svg_4').getElementsByTagName("circle");
+
+                for (var i = 0, len = allTags.length; i < len; i++) {
+                    var xCord = allTags[i].getAttribute("cx");
+                    var yCord = allTags[i].getAttribute("cy");
+                    circlesArray.push({'x': xCord, 'y': yCord});
+
+                }
+
+
+                for (var i = 0; i < circlesArray.length; i++) {
+
+                    try {
+                        //if (i > circlesArray.length - 3) {
+                        for (var j = 0; j < circlesArray.length; j++) {
+                            var m = "M" + circlesArray[i].x + "," + circlesArray[i].y + " ";
+                            var l = "L" + circlesArray[j + 1].x + "," + circlesArray[j + 1].y;
+                            var newLine = $("<path fill='blue' stroke='blue' d='" + m + l + "' />");
+                            svg.append(newLine);
+                        }
+                        //}
+
+                    } catch (err) {
+
+                    }
+
+                }
+
+
+                $("body").html($("body").html());
+
+
+            }, false);
+
+            //map animations
+            document.getElementById('my_svg').addEventListener('click', function () {
+                console.log('click');
+                var e = event.target;
+                var dim = e.getBoundingClientRect();
+                var x = event.clientX - dim.left;
+                var xa = x - 2;
+                var y = event.clientY - dim.top;
+                var ya = y - 150;
+
+                var display2 = $("<rect class='animatedElement' width='4' height='13' x='" + xa + "' y='" + y + "' fill='url(#gradRect)' rx='100%' ry='100%' />");
+                var display = $("<circle class='animatedElement' cx='" + x + "' cy='" + y + "' r='7' stroke='black' stroke-width='0' fill='url(#grad2)'/>");
+
+
+                var svg = $("#my_svg");
+
+                svg.append(display2);
+                svg.append(display);
+                console.log(display);
+
+                setTimeout(function () {
+
+                    console.log('hello');
+                    $('circle').removeClass("animatedElement");
+                    $('rect').removeClass("animatedElement");
+                }, 500);
+
+
+
+                $("body").html($("body").html());
+
+
+
+            }, false);
+
+
+            //moving circle
+            var fired = false;
+            window.addEventListener('scroll', function () {
+                var checkIfFiredElement = document.getElementById('circ0');
+
+
+                if (document.body.scrollTop > 139 && checkIfFiredElement.getAttribute("cy") == 30) {
+                    myAnimationElement.beginElement();
+                    myAnimationElement2.beginElement();
+                    myAnimationElement3.beginElement();
+                    myAnimationElement4.beginElement();
+                    myAnimationElement5.beginElement();
+                    myAnimationElement6.beginElement();
+                    myAnimationElement7.beginElement();
+                    myAnimationElement8.beginElement();
+                    myAnimationElement9.beginElement();
+                    myAnimationElement10.beginElement();
+                    myAnimationElement11.beginElement();
+                    myAnimationElement12.beginElement();
+                    fired = true;
+                    var af = document.getElementById('circ0');
+                }
+
+            }, false);
+
+
+
+            //map
+            var displayCity = function () {
+                var circ = $('#circ');
+
+                //var display=$("<circle cx='100' cy='100' r='20' stroke='blue' stroke-width='1' fill='red'/>");
+                //var display=$('<rect x="0" y="400" width="100" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)"/>');
+                //var svg=$('#my_svg');
+                //svg.append(display);
+                var textDiv = $('#info_div');
+                textDiv.text('here');
+
+                //$("body").html($("body").html());
+            };
+            var displayCity2 = function () {
+                var circ = $('#circ');
+
+
+                var textDiv = $('#info_div');
+                textDiv.text('there');
+                //$("body").html($("body").html());
+            };
+            var displayCity3 = function () {
+                var circ = $('#circ');
+
+
+                var textDiv = $('#info_div');
+                textDiv.text('where ever');
+                $("body").html($("body").html());
+            };
+            var displayCity4 = function () {
+                var circ = $('#circ');
+
+
+                var textDiv = $('#info_div');
+                textDiv.text('BFE');
+                $("body").html($("body").html());
+            };
+
+            //look at snap svg indefinite
+        </script>
+    </body>
+</html>
